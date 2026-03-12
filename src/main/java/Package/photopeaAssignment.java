@@ -79,6 +79,45 @@ public class photopeaAssignment {
             page.waitForTimeout(5000);
             System.out.println("Background removed");
 
+            // Screenshot preview for validation 
+            Path previewPath = Paths.get("exports/preview.png"); 
+            page.screenshot(new Page.ScreenshotOptions() .setPath(previewPath) .setTimeout(60000)); 
+            System.out.println("Preview screenshot saved");
+
+            // ---------- Export PNG ----------
+            Download pngDownload = page.waitForDownload(() -> {
+                page.keyboard().press("Alt+F");
+                page.waitForTimeout(200); // small delay
+                page.keyboard().press("E");
+                page.waitForTimeout(200);
+                page.keyboard().press("P");
+            });
+            Path pngPath = exportDir.resolve("output.png");
+            pngDownload.saveAs(pngPath);
+            System.out.println("PNG Exported");
+
+            // ---------- Export JPG ----------
+            Download jpgDownload = page.waitForDownload(() -> {
+                page.keyboard().press("Alt+F");
+                page.waitForTimeout(200);
+                page.keyboard().press("E");
+                page.waitForTimeout(200);
+                page.keyboard().press("J");
+            });
+            Path jpgPath = exportDir.resolve("output.jpg");
+            jpgDownload.saveAs(jpgPath);
+            System.out.println("JPG Exported");
+
+            // ---------- Save PSD ----------
+            Download psdDownload = page.waitForDownload(() -> {
+                page.keyboard().press("Alt+F");
+                page.waitForTimeout(200);
+                page.keyboard().press("S"); // Save as PSD
+            });
+            Path psdPath = exportDir.resolve("output.psd");
+            psdDownload.saveAs(psdPath);
+            System.out.println("PSD Saved");
+
             
         }
     }
