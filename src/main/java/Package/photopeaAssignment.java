@@ -40,7 +40,20 @@ public class photopeaAssignment {
             page.mouse().up();
             System.out.println("Rectangle created");
 
-            
-        }
+            // Circle
+            page.mouse().move(650, 200);
+            page.mouse().down();
+            page.mouse().move(800, 350);
+            page.mouse().up();
+            System.out.println("Circle created");
+
+            // Triangle
+            page.mouse().move(400, 450);
+            page.mouse().down();
+            page.mouse().move(550, 600);
+            page.mouse().up();
+            System.out.println("Triangle created");
+
+                    }
     }
 }
