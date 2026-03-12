@@ -118,7 +118,16 @@ public class photopeaAssignment {
             psdDownload.saveAs(psdPath);
             System.out.println("PSD Saved");
 
-            
+            // ---------- Validation Checks ----------
+            System.out.println("\n----- VALIDATION CHECKS -----");
+            if (Files.exists(pngPath)) System.out.println("✔ PNG file downloaded");
+            if (Files.exists(jpgPath)) System.out.println("✔ JPG file downloaded");
+            if (Files.exists(psdPath)) System.out.println("✔ PSD file downloaded");
+            if (Files.exists(previewPath)) System.out.println("✔ Preview screenshot exists");
+            System.out.println("-----------------------------");
+
+            page.waitForTimeout(3000);
+            browser.close();
         }
     }
 }
