@@ -1,0 +1,46 @@
+package Package;
+
+import com.microsoft.playwright.*;
+import java.nio.file.*;
+
+public class photopeaAssignment {
+
+    public static void main(String[] args) {
+
+        Path exportDir = Paths.get("exports");
+        try {
+            Files.createDirectories(exportDir);
+        } catch (Exception e) {
+            System.out.println("Export folder already exists");
+        }
+
+        try (Playwright playwright = Playwright.create()) {
+
+            Browser browser = playwright.chromium()
+                    .launch(new BrowserType.LaunchOptions().setHeadless(false));
+
+            BrowserContext context = browser.newContext(
+                    new Browser.NewContextOptions().setAcceptDownloads(true)
+            );
+
+            Page page = context.newPage();
+
+            // Open Photopea
+            page.navigate("https://www.photopea.com/");
+            page.waitForTimeout(6000);
+            System.out.println("Photopea opened");
+
+            // Draw shapes
+            page.keyboard().press("U"); // Shape tool
+
+            // Rectangle
+            page.mouse().move(200, 200);
+            page.mouse().down();
+            page.mouse().move(600, 400);
+            page.mouse().up();
+            System.out.println("Rectangle created");
+
+            
+        }
+    }
+}
