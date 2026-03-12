@@ -54,6 +54,15 @@ public class photopeaAssignment {
             page.mouse().up();
             System.out.println("Triangle created");
 
-                    }
+            // Add Text
+            page.keyboard().press("T");
+            page.mouse().click(700, 300);
+            page.keyboard().type("Hello");
+            page.mouse().click(700, 450);
+            page.keyboard().type("World");
+            System.out.println("Text added");
+
+            
+        }
     }
 }
