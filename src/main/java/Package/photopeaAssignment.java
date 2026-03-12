@@ -69,6 +69,16 @@ public class photopeaAssignment {
             page.mouse().up();
             System.out.println("Drag and drop completed");
 
+            // Load external image
+            page.navigate("https://www.photopea.com#%7B%22files%22:[%22https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg%22]%7D");
+            page.waitForTimeout(6000);
+            System.out.println("Image loaded");
+
+            // Remove background
+            page.keyboard().press("Control+Shift+R");
+            page.waitForTimeout(5000);
+            System.out.println("Background removed");
+
             
         }
     }
