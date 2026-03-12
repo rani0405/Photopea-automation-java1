@@ -62,6 +62,13 @@ public class photopeaAssignment {
             page.keyboard().type("World");
             System.out.println("Text added");
 
+            // Drag & Drop
+            page.mouse().move(350, 300);
+            page.mouse().down();
+            page.mouse().move(650, 450);
+            page.mouse().up();
+            System.out.println("Drag and drop completed");
+
             
         }
     }
