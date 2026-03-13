@@ -35,6 +35,7 @@ The automation performs the following actions:
 PhotopeaAutomation1_qa-assignment
 │
 ├── src/main/java/Package/photopeaAssignment.java
+├── src/main/java/Package/photopeaAutomationAss.java
 ├── exports/
 │   ├── preview.png
 │   ├── output.png
