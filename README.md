@@ -27,15 +27,14 @@ The automation performs the following actions:
 * Java
 * Playwright
 * Maven
-* Photopea Web Editor
 
 ---
 
 ## Project Structure
 
-PhotopeaAutomation
+PhotopeaAutomation1_qa-assignment
 │
-├── src/main/java/Package/PhotopeaAutomation.java
+├── src/main/java/Package/photopeaAssignment.java
 ├── exports/
 │   ├── preview.png
 │   ├── output.png
@@ -73,7 +72,7 @@ cd photopea-automation
 Run the automation:
 
 mvn compile
-mvn exec:java -Dexec.mainClass="Package.PhotopeaAutomation"
+mvn exec:java -Dexec.mainClass="Package.photopeaAssignment"
 
 ---
 
