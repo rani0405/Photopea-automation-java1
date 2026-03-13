@@ -90,9 +90,10 @@ mvn exec:java -Dexec.mainClass="Package.photopeaAssignment"
 
 ## Video Walkthrough
 
-Video explanation of the automation solution:
+Video :
 
 Recorded using https://cap.so
+Video Link:https://cap.so/s/7jjhmsj13fsbcjn
 
 
 ## Notes
