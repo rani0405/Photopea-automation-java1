@@ -64,7 +64,7 @@ mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="inst
 
 Clone the repository:
 
-git clone [https://github.com/yourusername/photopea-automation.git](https://github.com/rani0405/Photopea-automation-java1.git)
+git clone (https://github.com/rani0405/Photopea-automation-java1.git)
 
 Navigate to project folder:
 
